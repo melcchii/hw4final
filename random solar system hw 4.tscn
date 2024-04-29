@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://cc1auk8ch1xh3"]
+
+[ext_resource type="Texture2D" uid="uid://bnpdtsd2mw5ev" path="res://milky-way-2695569_1280.jpg" id="1_enpl3"]
+[ext_resource type="Texture2D" uid="uid://bhd7lc543d70n" path="res://the sun.png" id="2_f8hrs"]
+[ext_resource type="Script" path="res://Rotate.gd" id="3_wjswb"]
+[ext_resource type="Texture2D" uid="uid://d43t348oe65l" path="res://marble planet be like.png" id="4_rv30h"]
+[ext_resource type="Texture2D" uid="uid://ba42x3calqqgw" path="res://blu.png" id="5_f4b0v"]
+[ext_resource type="Texture2D" uid="uid://dqb5swebvixdt" path="res://pink blue planet.png" id="6_jb4ga"]
+[ext_resource type="Texture2D" uid="uid://14cj0qrm7dsj" path="res://skin planet.png" id="7_7uqte"]
+[ext_resource type="Texture2D" uid="uid://vrwlfe8phkvh" path="res://space-planet_5e172a69e77a4.png" id="8_j5utj"]
+[ext_resource type="Texture2D" uid="uid://2ctvglilhlgs" path="res://purble planet.png" id="9_sg2kp"]
+[ext_resource type="Texture2D" uid="uid://d2vgydulkw8ul" path="res://purple-planet.png" id="10_rlmp1"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(9, 1)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(399.407, 232.723)
+scale = Vector2(0.0399793, 0.0399793)
+
+[node name="galaxy" type="Sprite2D" parent="Node2D"]
+position = Vector2(4246.72, 2239.76)
+scale = Vector2(22.5434, 22.4236)
+texture = ExtResource("1_enpl3")
+
+[node name="TheSun" type="Sprite2D" parent="."]
+position = Vector2(569, 328)
+scale = Vector2(0.0635713, 0.0635713)
+texture = ExtResource("2_f8hrs")
+
+[node name="Node2D" type="Node2D" parent="TheSun"]
+position = Vector2(-99.5262, 129.384)
+scale = Vector2(6.63165, 6.63165)
+script = ExtResource("3_wjswb")
+rotation_speed = 0.02
+
+[node name="MarblePlanetBeLike" type="Sprite2D" parent="TheSun/Node2D"]
+position = Vector2(187.597, 267.138)
+scale = Vector2(0.098473, 0.098473)
+texture = ExtResource("4_rv30h")
+script = ExtResource("3_wjswb")
+
+[node name="Node2D" type="Node2D" parent="TheSun/Node2D/MarblePlanetBeLike"]
+scale = Vector2(1, 1)
+script = ExtResource("3_wjswb")
+rotation_speed = 0.02
+
+[node name="blu" type="Sprite2D" parent="TheSun/Node2D/MarblePlanetBeLike/Node2D"]
+position = Vector2(1798.38, -381.012)
+scale = Vector2(2.23572, 2.23572)
+texture = ExtResource("5_f4b0v")
+script = ExtResource("3_wjswb")
+rotation_speed = 0.02
+
+[node name="PinkBluePlanet" type="Sprite2D" parent="TheSun/Node2D"]
+position = Vector2(-214, -164)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("6_jb4ga")
+
+[node name="SkinPlanet" type="Sprite2D" parent="TheSun/Node2D"]
+position = Vector2(417.646, -241.702)
+scale = Vector2(0.287824, 0.287824)
+texture = ExtResource("7_7uqte")
+script = ExtResource("3_wjswb")
+rotation_speed = 0.001
+
+[node name="Node2D" type="Node2D" parent="TheSun/Node2D/SkinPlanet"]
+script = ExtResource("3_wjswb")
+rotation_speed = 0.02
+
+[node name="Sprite2D" type="Sprite2D" parent="TheSun/Node2D/SkinPlanet/Node2D"]
+position = Vector2(-590.701, -312.586)
+scale = Vector2(0.199717, 0.199717)
+texture = ExtResource("8_j5utj")
+script = ExtResource("3_wjswb")
+rotation_speed = 0.03
+
+[node name="PurblePlanet" type="Sprite2D" parent="TheSun/Node2D"]
+position = Vector2(-655.839, 157.582)
+scale = Vector2(0.310432, 0.307549)
+texture = ExtResource("9_sg2kp")
+
+[node name="Sprite2D" type="Sprite2D" parent="TheSun/Node2D"]
+position = Vector2(-134.429, -451.216)
+scale = Vector2(0.140723, 0.138803)
+texture = ExtResource("10_rlmp1")
